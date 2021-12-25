@@ -25,6 +25,12 @@ public class LoginPage extends GeneralPage {
     protected WebElement getLblErrorMessage() {return Constant.WEBDRIVER.findElement(lblErrorMessage);}
 
     //Methods
+
+    @Override
+    public String getWelcomeMesage() {
+        return super.getWelcomeMesage();
+    }
+
     public String getErrorMessage() {
         return this.getLblErrorMessage().getText();
     }

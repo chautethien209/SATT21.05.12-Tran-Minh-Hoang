@@ -12,8 +12,10 @@ public class TC01 extends TestBase {
         HomePage homePage = new HomePage();
         homePage.open();
         LoginPage loginPage = new LoginPage();
+        loginPage.Login("hoang20997@gmail.com", "hoang209");
 
-        String actualMsg = loginPage.Login("hoang20997@gmail.com", "hoang209").getWelcomeMesage();
+        String message = loginPage.getWelcomeMesage();
+        String actualMsg = message;
         String expectedMsg = "Welcome guest!";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Welcome msg is not display as expected");
