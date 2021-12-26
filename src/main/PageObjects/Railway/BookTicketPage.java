@@ -14,6 +14,7 @@ public class BookTicketPage extends GeneralPage {
 
     //Methods
     public String getBookTicketForm() {
+        gotoBookTicketPage();
         return this.getLblBookTicketForm().getText();
     }
 }
