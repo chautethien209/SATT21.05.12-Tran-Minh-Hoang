@@ -14,6 +14,7 @@ public class ContactPage extends GeneralPage {
 
     //Methods
     public String getContactInformation() {
+        gotoContactPage();
         return this.getLblContactInformation().getText();
     }
 }
