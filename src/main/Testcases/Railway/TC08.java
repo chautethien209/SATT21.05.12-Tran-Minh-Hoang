@@ -16,9 +16,9 @@ public class TC08 extends TestBase {
 
         homePage.open();
         registerPage.gotoRegisterPage();
-        registerPage.Register(RegisterPage.AutoEmail,Constant.PASSWORD,Constant.PASSWORD,RegisterPage.AutoPID);
+        registerPage.Register(registerPage.RandomEmail(),Constant.PASSWORD,Constant.PASSWORD,registerPage.RandomPID());
         loginPage.gotoLoginPage();
-        loginPage.Login(RegisterPage.AutoEmail, Constant.PASSWORD);
+        loginPage.Login(registerPage.AutoEmail, Constant.PASSWORD);
 
         String actualMsg = loginPage.getErrorMessage();
         String expectedMsg = "Invalid username or password. Please try again.";

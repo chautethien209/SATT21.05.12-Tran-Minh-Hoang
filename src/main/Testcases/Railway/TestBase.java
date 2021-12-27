@@ -3,8 +3,6 @@ package main.Testcases.Railway;
 import main.Common.Constant;
 import main.Common.Utilities;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
@@ -16,10 +14,10 @@ public class TestBase {
         System.out.println("Start Testing");
     }
 
-    @AfterTest
-    public void closeTest(){
-        System.out.println("End Test");
-    }
+//    @AfterTest
+//    public void closeTest(){
+//        System.out.println("End Test");
+//    }
 
     @BeforeMethod
     public void beforeMethod() throws IOException {
@@ -30,10 +28,10 @@ public class TestBase {
         System.out.println("Reset method");
     }
 
-    @AfterMethod
-    public void afterMethod() {
-        System.out.println("Post-condition");
-        Constant.WEBDRIVER.quit();
-        System.out.println("End method");
-    }
+//    @AfterMethod
+//    public void afterMethod() {
+//        System.out.println("Post-condition");
+//        Constant.WEBDRIVER.quit();
+//        System.out.println("End method");
+//    }
 }

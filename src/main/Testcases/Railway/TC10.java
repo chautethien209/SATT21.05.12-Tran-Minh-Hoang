@@ -14,7 +14,7 @@ public class TC10 extends TestBase {
 
         homePage.open();
         registerPage.gotoRegisterPage();
-        registerPage.Register(Constant.USENAME,Constant.PASSWORD,Constant.PASSWORD,RegisterPage.AutoPID);
+        registerPage.Register(Constant.USENAME,Constant.PASSWORD,Constant.PASSWORD,registerPage.RandomPID());
 
         String actualMsg = registerPage.getErrorMessage();
         String expectedMsg = "This email address is already in use.";

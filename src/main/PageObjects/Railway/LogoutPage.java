@@ -28,15 +28,4 @@ public class LogoutPage extends GeneralPage {
         return false;
     }
     public String Check;
-//    public void CheckText() {
-//        gotoContactPage();
-//        gotoLogoutPage();
-//        gotoHomePage();
-//
-//        if (LogoutText() == true) {
-//            Check = ("Exist");
-//        } else {
-//            Check = ("Null");
-//        }
-//    }
 }

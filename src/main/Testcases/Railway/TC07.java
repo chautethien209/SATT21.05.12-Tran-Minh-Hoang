@@ -14,7 +14,7 @@ public class TC07 extends TestBase {
 
         homePage.open();
         registerPage.gotoRegisterPage();
-        registerPage.Register(RegisterPage.AutoEmail,Constant.PASSWORD,Constant.PASSWORD,RegisterPage.AutoPID);
+        registerPage.Register(registerPage.RandomEmail(),Constant.PASSWORD,Constant.PASSWORD, registerPage.RandomPID());
 
         String actualMsg = registerPage.getSuccessMessage();
         String expectedMsg = "Thank you for registering your account";

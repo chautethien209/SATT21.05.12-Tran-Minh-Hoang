@@ -52,15 +52,14 @@ public class RegisterPage extends GeneralPage {
         this.getTxtPID().sendKeys(PID);
         this.getBtnRegister().click();
     }
-
-    public static void RandomEmail(String[] args) {
+    public String AutoEmail;
+    public String RandomEmail() {
         String generateEmail = RandomStringUtils.randomAlphabetic(6);
         AutoEmail = generateEmail + "@gmail.com";
+        return AutoEmail;
     }
-    public static String AutoEmail;
-
-    public static void RandomPID(String[] args) {
-        AutoPID = RandomStringUtils.randomNumeric(8);
+    public String RandomPID() {
+        String AutoPID = RandomStringUtils.randomNumeric(8);
+        return AutoPID;
     }
-    public static String AutoPID;
 }
