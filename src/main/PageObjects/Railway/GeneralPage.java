@@ -8,18 +8,15 @@ import org.openqa.selenium.WebElement;
 public class GeneralPage {
 
     //locator
-    private final By tabLogin = By.xpath("//div[@id='menu']//a[@href = '/Account/Login.cshtml']");
-    private final By tabLogout = By.xpath("//div[@id='menu']//a[@href = '/Account/Logout']");
     private final By tabHome = By.xpath("//div[@id='menu']//a/span[text()='Home']/..");
-    private final By tabContact = By.xpath("//div[@id='menu']//a[@href = '/Page/Contact.cshtml']");
+    private final By tabContact = By.xpath("//div[@id='menu']//a[@href ='/Page/Contact.cshtml']");
     private final By tabBookTicket = By.xpath("//div[@id='menu']//a[@href = '/Page/BookTicketPage.cshtml']");
+    private final By tabLogin = By.xpath("//div[@id='menu']//a[@href = '/Account/Login.cshtml']");
+    private final By tabRegister = By.xpath("//div[@id='menu']//a[@href ='/Account/Register.cshtml']");
+    private final By tabLogout = By.xpath("//div[@id='menu']//a[@href = '/Account/Logout']");
     private final By lblWelcomeMesage = By.xpath("//div[@class='account']/strong");
 
     //Element
-    protected WebElement getTabLogin() {return Constant.WEBDRIVER.findElement(tabLogin);}
-    protected WebElement getTabLogout() {
-        return Constant.WEBDRIVER.findElement(tabLogout);
-    }
     protected WebElement getTabHome() {
         return Constant.WEBDRIVER.findElement(tabHome);
     }
@@ -29,27 +26,37 @@ public class GeneralPage {
     protected WebElement getTabBookTicket() {
         return Constant.WEBDRIVER.findElement(tabBookTicket);
     }
+    protected WebElement getTabRegister() {
+        return Constant.WEBDRIVER.findElement(tabRegister);
+    }
+    protected WebElement getTabLogin() {return Constant.WEBDRIVER.findElement(tabLogin);}
+    protected WebElement getTabLogout() {
+        return Constant.WEBDRIVER.findElement(tabLogout);
+    }
     protected WebElement getLblWelcomeMesage() {
         return Constant.WEBDRIVER.findElement(lblWelcomeMesage);
     }
 
     //Methods
-    public String getWelcomeMesage(){
-        return this.getLblWelcomeMesage().getText();
-    }
     public void gotoHomePage(){
         this.getTabHome().click();
     }
     public void gotoContactPage(){
         this.getTabContact().click();
     }
-    public void gotoLoginPage(){
-        this.getTabLogin().click();
-    }
     public void gotoBookTicketPage(){
         this.getTabBookTicket().click();
     }
+    public void gotoRegisterPage(){
+        this.getTabRegister().click();
+    }
+    public void gotoLoginPage(){
+        this.getTabLogin().click();
+    }
     public void gotoLogoutPage(){
         this.getTabLogout().click();
+    }
+    public String getWelcomeMesage(){
+        return this.getLblWelcomeMesage().getText();
     }
 }

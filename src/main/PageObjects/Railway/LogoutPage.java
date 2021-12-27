@@ -29,6 +29,7 @@ public class LogoutPage extends GeneralPage {
     }
     public String Check;
     public void CheckText() {
+        gotoContactPage();
         gotoLogoutPage();
         gotoHomePage();
         if (LogoutText() == true) {
