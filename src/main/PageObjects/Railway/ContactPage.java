@@ -13,8 +13,5 @@ public class ContactPage extends GeneralPage {
     protected WebElement getLblContactInformation() {return Constant.WEBDRIVER.findElement(lblContactInformation);}
 
     //Methods
-    public String getContactInformation() {
-        gotoContactPage();
-        return this.getLblContactInformation().getText();
-    }
+    public String getContactInformation() {return this.getLblContactInformation().getText();}
 }

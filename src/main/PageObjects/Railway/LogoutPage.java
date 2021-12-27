@@ -23,19 +23,20 @@ public class LogoutPage extends GeneralPage {
                 return false;
             }
         } catch (Exception e) {
-            System.out.print(e);
+            Check= String.valueOf((e));
         }
         return false;
     }
     public String Check;
-    public void CheckText() {
-        gotoContactPage();
-        gotoLogoutPage();
-        gotoHomePage();
-        if (LogoutText() == true) {
-            Check = ("Fail");
-        } else {
-            Check = ("Success");
-        }
-    }
+//    public void CheckText() {
+//        gotoContactPage();
+//        gotoLogoutPage();
+//        gotoHomePage();
+//
+//        if (LogoutText() == true) {
+//            Check = ("Exist");
+//        } else {
+//            Check = ("Null");
+//        }
+//    }
 }

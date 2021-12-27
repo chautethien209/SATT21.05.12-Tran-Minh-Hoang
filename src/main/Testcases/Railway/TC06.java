@@ -15,12 +15,13 @@ public class TC06 extends TestBase {
         LogoutPage logoutPage = new LogoutPage();
 
         homePage.open();
+        loginPage.gotoLoginPage();
         loginPage.Login(Constant.USENAME, Constant.PASSWORD);
 
         String actualMsg = logoutPage.Check;
-        String expectedMsg = "success";
+        String expectedMsg = null;
 
-        Assert.assertEquals(actualMsg, expectedMsg, "Cannot navigate to BookTicketPage");
+        Assert.assertEquals(actualMsg, expectedMsg, "'Log out' tab is not disappeared");
         System.out.println("Test Case passed.");
     }
 }

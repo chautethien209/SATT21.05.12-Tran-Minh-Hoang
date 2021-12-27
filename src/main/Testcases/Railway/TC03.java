@@ -13,6 +13,7 @@ public class TC03 extends TestBase {
         LoginPage loginPage = new LoginPage();
 
         homePage.open();
+        loginPage.gotoLoginPage();
         loginPage.Login(Constant.USENAME, "hoang20997");
 
         String actualMsg = loginPage.getErrorMessage();

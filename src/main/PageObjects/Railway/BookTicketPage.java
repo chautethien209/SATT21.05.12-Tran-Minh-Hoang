@@ -13,8 +13,5 @@ public class BookTicketPage extends GeneralPage {
     protected WebElement getLblBookTicketForm() {return Constant.WEBDRIVER.findElement(lblBookTicketForm);}
 
     //Methods
-    public String getBookTicketForm() {
-        gotoBookTicketPage();
-        return this.getLblBookTicketForm().getText();
-    }
+    public String getBookTicketForm() {return this.getLblBookTicketForm().getText();}
 }

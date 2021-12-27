@@ -15,7 +15,9 @@ public class TC04 extends TestBase {
         BookTicketPage bookticketPage = new BookTicketPage();
 
         homePage.open();
+        loginPage.gotoLoginPage();
         loginPage.Login(Constant.USENAME, Constant.PASSWORD);
+        bookticketPage.gotoBookTicketPage();
 
         String actualMsg = bookticketPage.getBookTicketForm();
         String expectedMsg = "Book ticket form";

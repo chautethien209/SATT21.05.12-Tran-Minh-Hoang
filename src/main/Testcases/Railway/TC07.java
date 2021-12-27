@@ -1,5 +1,6 @@
 package main.Testcases.Railway;
 
+import main.Common.Constant;
 import main.PageObjects.Railway.HomePage;
 import main.PageObjects.Railway.RegisterPage;
 import org.testng.Assert;
@@ -12,12 +13,13 @@ public class TC07 extends TestBase {
         RegisterPage registerPage = new RegisterPage();
 
         homePage.open();
-        registerPage.Register("test10@gmail.com","hoang20997","hoang20997","123456789");
+        registerPage.gotoRegisterPage();
+        registerPage.Register(RegisterPage.AutoEmail,Constant.PASSWORD,Constant.PASSWORD,RegisterPage.AutoPID);
 
         String actualMsg = registerPage.getSuccessMessage();
         String expectedMsg = "Thank you for registering your account";
 
-        Assert.assertEquals(actualMsg, expectedMsg, "Welcome msg is not display as expected");
+        Assert.assertEquals(actualMsg, expectedMsg, "Success msg is not display as expected");
         System.out.println("Test Case passed.");
     }
 }

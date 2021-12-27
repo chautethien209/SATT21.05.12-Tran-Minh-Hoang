@@ -14,6 +14,7 @@ public class TC05 extends TestBase {
         LoginPage loginPage = new LoginPage();
 
         homePage.open();
+        loginPage.gotoLoginPage();
         loginPage.LoginMultipleTimes(Constant.USENAME,"hoang20997",5);
 
         String actualMsg = loginPage.getErrorMessage();

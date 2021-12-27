@@ -1,8 +1,8 @@
 package main.Testcases.Railway;
 
 import main.Common.Constant;
-import main.PageObjects.Railway.LoginPage;
 import main.PageObjects.Railway.HomePage;
+import main.PageObjects.Railway.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,6 +14,7 @@ public class TC01 extends TestBase {
         LoginPage loginPage = new LoginPage();
 
         homePage.open();
+        loginPage.gotoLoginPage();
         loginPage.Login(Constant.USENAME, Constant.PASSWORD);
 
         String actualMsg = loginPage.getWelcomeMesage();
