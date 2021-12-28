@@ -34,27 +34,15 @@ public class BookTicketPage extends GeneralPage {
 
     //Methods
     public String getBookTicketForm() {return this.getLblBookTicketForm().getText();}
+    public String getDepartFrom() {return this.getDblNhaTrang().getText();}
+    public String getArriveAt() {return this.getDblSaiGon().getText();}
     public String getTicketBooked() {return this.getLblTicketBooked().getText();}
     public String getTicketBookedTable() {return this.getTblTicketBooked().getText();}
+    public String Check;
     public void BookTicket() {
         for (int i = 0; i <= 10; i++) {
-            gotoBookTicketPage();
-            this.getDdlDepartFrom().click();
-            if (getDblNhaTrang().equals("Nha Trang")) {
-                this.getDblNhaTrang().click();
-                this.getDdlArriveAt();
-                if (getDblSaiGon().equals("Sài Gòn")) {
-                    this.getDblSaiGon().click();
-                    this.getDdlTicketAmount().click();
-                    this.getDblAmount4().click();
-                    this.getBtnBookTicket().click();
-                    i=11;
-                }else {
-                    break;
-                }
-            } else {
-                gotoHomePage();
-            }
+
+
         }
     }
 }

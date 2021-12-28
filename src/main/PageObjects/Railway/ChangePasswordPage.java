@@ -12,6 +12,7 @@ public class ChangePasswordPage extends GeneralPage {
     private final By txtConfirmPassword = By.id("confirmPassword");
     private final By btnChangePassword = By.xpath("//input[@value='Change Password']");
     private final By lblErrorMessage = By.xpath("//p[@class='message error']");
+    private final By lblConfirmPassErrMsg = By.xpath("//li/label[@for='confirmPassword']/following-sibling::label");
 
     //Elements
     protected WebElement getTxtCurrentPassword() {
@@ -27,9 +28,11 @@ public class ChangePasswordPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(btnChangePassword);
     }
     protected WebElement getLblErrorMessage() {return Constant.WEBDRIVER.findElement(lblErrorMessage);}
+    protected WebElement getLblConfirmPassErrMsg() {return Constant.WEBDRIVER.findElement(lblConfirmPassErrMsg);}
 
     //Methods
     public String getErrorMessage() {return this.getLblErrorMessage().getText();}
+    public String getConfirmPassErrMsg() {return this.getLblConfirmPassErrMsg().getText();}
     public void ChangePassword(String currentpassword, String newpassword, String confirmpassword) {
         //Submit login
         this.getTxtCurrentPassword().sendKeys(currentpassword);
