@@ -45,24 +45,31 @@ public class GeneralPage {
     public void gotoHomePage(){
         this.getTabHome().click();
     }
+
     public void gotoContactPage(){
         this.getTabContact().click();
     }
+
     public void gotoBookTicketPage(){
         this.getTabBookTicket().click();
     }
+
     public void gotoRegisterPage(){
         this.getTabRegister().click();
     }
+
     public void gotoLoginPage(){
         this.getTabLogin().click();
     }
+
     public void gotoChangePasswordPage(){
         this.getTabChangePassword().click();
     }
+
     public void gotoLogoutPage(){
         this.getTabLogout().click();
     }
+
     public String getWelcomeMesage(){
         return this.getLblWelcomeMesage().getText();
     }

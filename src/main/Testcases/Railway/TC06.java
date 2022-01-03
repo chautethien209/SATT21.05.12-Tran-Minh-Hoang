@@ -16,9 +16,9 @@ public class TC06 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.Login(Constant.USENAME, Constant.PASSWORD);
+        loginPage.login(Constant.USENAME, Constant.PASSWORD);
 
-        String actualMsg = logoutPage.Check;
+        String actualMsg = logoutPage.check;
         String expectedMsg = null;
 
         Assert.assertEquals(actualMsg, expectedMsg, "'Log out' tab is not disappeared");

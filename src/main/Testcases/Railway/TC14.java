@@ -18,11 +18,11 @@ public class TC14 extends TestBase {
 
         homePage.open();
         registerPage.gotoRegisterPage();
-        registerPage.Register(registerPage.RandomEmail(), Constant.PASSWORD,Constant.PASSWORD,registerPage.RandomPID());
+        registerPage.registerAccount(registerPage.randomEmail(), Constant.PASSWORD,Constant.PASSWORD,registerPage.randomPID());
         loginPage.gotoLoginPage();
-        loginPage.Login(registerPage.AutoEmail, Constant.PASSWORD);
+        loginPage.login(registerPage.autoEmail, Constant.PASSWORD);
         bookticketPage.gotoBookTicketPage();
-        bookticketPage.BookTicket();
+        bookticketPage.BookTicket("Nha Trang","Sài Gòn","Hard seat","4");
 
         String actualMsg = bookticketPage.getTicketBooked();
         String expectedMsg = "Ticket booked successfully!";

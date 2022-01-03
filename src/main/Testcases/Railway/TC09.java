@@ -16,9 +16,9 @@ public class TC09 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.Login(Constant.USENAME, Constant.PASSWORD);
+        loginPage.login(Constant.USENAME, Constant.PASSWORD);
         changepassordPage.gotoChangePasswordPage();
-        changepassordPage.ChangePassword(Constant.PASSWORD,"a123:\"/{}!@$\\","b456:\"/{}!@$\\");
+        changepassordPage.changePassword(Constant.PASSWORD,"a123:\"/{}!@$\\","b456:\"/{}!@$\\");
 
         String actualMsg = changepassordPage.getErrorMessage() + changepassordPage.getConfirmPassErrMsg();
         String expectedMsg = "Password change failed. Please correct the errors and try again."+"The password confirmation does not match the new password.";

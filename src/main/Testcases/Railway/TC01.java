@@ -15,7 +15,7 @@ public class TC01 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.Login(Constant.USENAME, Constant.PASSWORD);
+        loginPage.login(Constant.USENAME, Constant.PASSWORD);
 
         String actualMsg = loginPage.getWelcomeMesage();
         String expectedMsg = "Welcome guest!";

@@ -16,7 +16,7 @@ public class TC04 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.Login(Constant.USENAME, Constant.PASSWORD);
+        loginPage.login(Constant.USENAME, Constant.PASSWORD);
         bookticketPage.gotoBookTicketPage();
 
         String actualMsg = bookticketPage.getBookTicketForm();

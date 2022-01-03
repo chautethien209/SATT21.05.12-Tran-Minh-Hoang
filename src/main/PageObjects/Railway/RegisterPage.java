@@ -41,10 +41,14 @@ public class RegisterPage extends GeneralPage {
 
     //Methods
     public String getSuccessMessage() {return this.getLblSuccessMessage().getText();}
+
     public String getErrorMessage() {return this.getLblErrorMessage().getText();}
+
     public String getPasswordErrMsg() {return this.getLblPasswordErrMsg().getText();}
+
     public String getPIDErrMsg() {return this.getLblPIDErrMsg().getText();}
-    public void Register(String email, String password, String ConfirmPassword, String PID) {
+
+    public void registerAccount(String email, String password, String ConfirmPassword, String PID) {
         //Submit register
         this.getTxtEmail().sendKeys(email);
         this.getTxtPassword().sendKeys(password);
@@ -52,13 +56,16 @@ public class RegisterPage extends GeneralPage {
         this.getTxtPID().sendKeys(PID);
         this.getBtnRegister().click();
     }
-    public String AutoEmail;
-    public String RandomEmail() {
+
+    public String autoEmail;
+
+    public String randomEmail() {
         String generateEmail = RandomStringUtils.randomAlphabetic(6);
-        AutoEmail = generateEmail + "@gmail.com";
-        return AutoEmail;
+        autoEmail = generateEmail + "@gmail.com";
+        return autoEmail;
     }
-    public String RandomPID() {
+
+    public String randomPID() {
         String AutoPID = RandomStringUtils.randomNumeric(8);
         return AutoPID;
     }

@@ -30,20 +30,23 @@ public class LoginPage extends GeneralPage {
     public String getWelcomeMesage() {
         return super.getWelcomeMesage();
     }
+
     public String getErrorMessage() {return this.getLblErrorMessage().getText();}
-    public void Login(String name, String password) {
+
+    public void login(String name, String password) {
         //Submit login
         this.getTxtUsername().sendKeys(name);
         this.getTxtPassword().sendKeys(password);
         this.getBtnLogin().click();
     }
-    public void LoginMultipleTimes(String name, String password, int times) {
+
+    public void loginMultipleTimes(String name, String password, int times) {
         //Submit login
         Login(name, password);
 
         for (int i = 1; i < times; i++) {
-            this.getTxtPassword().sendKeys(password);
-            this.getBtnLogin().click();
+            this.getTxtUsername().clear();
+            Login(name, password);
         }
     }
 }

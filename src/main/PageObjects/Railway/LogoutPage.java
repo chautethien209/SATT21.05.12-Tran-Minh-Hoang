@@ -15,7 +15,7 @@ public class LogoutPage extends GeneralPage {
     }
 
     //Methods
-    public boolean LogoutText() {
+    public boolean logoutText() {
         try {
             if (getLblLogout().equals("Logout")) {
                 return true;
@@ -23,9 +23,10 @@ public class LogoutPage extends GeneralPage {
                 return false;
             }
         } catch (Exception e) {
-            Check= String.valueOf((e));
+            check= String.valueOf((e));
         }
         return false;
     }
-    public String Check;
+
+    public String check;
 }

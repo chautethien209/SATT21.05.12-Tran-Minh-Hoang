@@ -14,7 +14,7 @@ public class TC11 extends TestBase {
 
         homePage.open();
         registerPage.gotoRegisterPage();
-        registerPage.Register(registerPage.RandomEmail(),"",Constant.PASSWORD,"");
+        registerPage.registerAccount(registerPage.randomEmail(),"",Constant.PASSWORD,"");
 
         String actualMsg = registerPage.getErrorMessage()+registerPage.getPasswordErrMsg()+registerPage.getPIDErrMsg();
         String expectedMsg = "There're errors in the form. Please correct the errors and try again."+"Invalid password length."+"Invalid ID length.";

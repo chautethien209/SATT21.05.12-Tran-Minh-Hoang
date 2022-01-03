@@ -15,7 +15,7 @@ public class TC05 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.LoginMultipleTimes(Constant.USENAME,"hoang20997",5);
+        loginPage.loginMultipleTimes(Constant.USENAME,"hoang20997",5);
 
         String actualMsg = loginPage.getErrorMessage();
         String expectedMsg = "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.";
