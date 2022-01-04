@@ -42,11 +42,11 @@ public class LoginPage extends GeneralPage {
 
     public void loginMultipleTimes(String name, String password, int times) {
         //Submit login
-        Login(name, password);
+        login(name, password);
 
         for (int i = 1; i < times; i++) {
             this.getTxtUsername().clear();
-            Login(name, password);
+            login(name, password);
         }
     }
 }
