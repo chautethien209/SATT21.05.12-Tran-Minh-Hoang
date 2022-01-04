@@ -15,18 +15,17 @@ public class LogoutPage extends GeneralPage {
     }
 
     //Methods
-    public boolean logoutText() {
-        try {
-            if (getLblLogout().equals("Logout")) {
+    public boolean isGoToLogoutPage(){
+        try{
+            if (getLblLogout().isDisplayed())
+            {
                 return true;
-            } else {
+            }else{
                 return false;
             }
-        } catch (Exception e) {
-            check= String.valueOf((e));
+        }catch (Exception e){
+            System.out.print(e.getMessage());
         }
         return false;
     }
-
-    public String check;
 }

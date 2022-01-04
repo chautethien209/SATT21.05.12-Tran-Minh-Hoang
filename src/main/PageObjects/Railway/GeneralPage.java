@@ -1,8 +1,15 @@
 package main.PageObjects.Railway;
 
 import main.Common.Constant;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import java.io.FileReader;
+import java.io.IOException;
 
 
 public class GeneralPage {
@@ -72,5 +79,12 @@ public class GeneralPage {
 
     public String getWelcomeMesage(){
         return this.getLblWelcomeMesage().getText();
+    }
+
+    public JSONObject callJSON(String url, int indexget) throws IOException, ParseException {
+        JSONParser parser = new JSONParser();
+        Object data = parser.parse(new FileReader(url));
+        JSONArray list = (JSONArray) data;
+        return (JSONObject) list.get(indexget);
     }
 }

@@ -9,7 +9,7 @@ public class LoginPage extends GeneralPage {
     //locator
     private final By txtUsername = By.id("username");
     private final By txtPassword = By.id("password");
-    private final By btnLogin = By.xpath("//input[@value='login']");
+    private final By btnLogin = By.xpath("//input[@value='Login']");
     private final By lblErrorMessage = By.xpath("//p[@class='message error LoginForm']");
 
     //Element
@@ -26,27 +26,36 @@ public class LoginPage extends GeneralPage {
 
     //Methods
 
-    @Override
-    public String getWelcomeMesage() {
-        return super.getWelcomeMesage();
+    public boolean isErrMesDisplay(){
+        try{
+            if (getLblErrorMessage().isDisplayed())
+            {
+                return true;
+            }else{
+                return false;
+            }
+        }catch (Exception e){
+            System.out.print(e.getMessage());
+        }
+        return false;
     }
 
     public String getErrorMessage() {return this.getLblErrorMessage().getText();}
 
-    public void login(String name, String password) {
+    public void getLogin(String name, String password) {
         //Submit login
         this.getTxtUsername().sendKeys(name);
         this.getTxtPassword().sendKeys(password);
         this.getBtnLogin().click();
     }
 
-    public void loginMultipleTimes(String name, String password, int times) {
+    public void getLoginMultipleTimes(String name, String password, int times) {
         //Submit login
-        login(name, password);
+        getLogin(name, password);
 
         for (int i = 1; i < times; i++) {
             this.getTxtUsername().clear();
-            login(name, password);
+            getLogin(name, password);
         }
     }
 }

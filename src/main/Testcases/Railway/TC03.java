@@ -14,12 +14,12 @@ public class TC03 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.login(Constant.USENAME, "hoang20997");
+        loginPage.getLogin(Constant.USENAME, "hoang20997");
 
         String actualMsg = loginPage.getErrorMessage();
         String expectedMsg = "There was a problem with your login and/or errors exist in your form.";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Error msg is not display as expected");
-        System.out.println("Test Case passed.");
+        System.out.println("Test Case ran.");
     }
 }

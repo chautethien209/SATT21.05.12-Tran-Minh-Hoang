@@ -20,6 +20,6 @@ public class TC11 extends TestBase {
         String expectedMsg = "There're errors in the form. Please correct the errors and try again."+"Invalid password length."+"Invalid ID length.";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Error msg is not display as expected");
-        System.out.println("Test Case passed.");
+        System.out.println("Test Case ran.");
     }
 }

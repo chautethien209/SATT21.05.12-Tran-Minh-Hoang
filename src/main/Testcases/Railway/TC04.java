@@ -16,13 +16,13 @@ public class TC04 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.login(Constant.USENAME, Constant.PASSWORD);
+        loginPage.getLogin(Constant.USENAME, Constant.PASSWORD);
         bookticketPage.gotoBookTicketPage();
 
         String actualMsg = bookticketPage.getBookTicketForm();
         String expectedMsg = "Book ticket form";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Cannot navigate to BookTicketPage");
-        System.out.println("Test Case passed.");
+        System.out.println("Test Case ran.");
     }
 }

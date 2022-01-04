@@ -20,6 +20,6 @@ public class TC10 extends TestBase {
         String expectedMsg = "This email address is already in use.";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Error msg is not display as expected");
-        System.out.println("Test Case passed.");
+        System.out.println("Test Case ran.");
     }
 }

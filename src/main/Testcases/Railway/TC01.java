@@ -15,13 +15,13 @@ public class TC01 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.login(Constant.USENAME, Constant.PASSWORD);
+        loginPage.getLogin(Constant.USENAME, Constant.PASSWORD);
 
-        String actualMsg = loginPage.getWelcomeMesage();
+        String actualMsg = homePage.getWelcomeMesage();
         String expectedMsg = "Welcome guest!";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Welcome msg is not display as expected");
-        System.out.println("Test Case passed.");
+        System.out.println("Test Case ran.");
     }
 }
 

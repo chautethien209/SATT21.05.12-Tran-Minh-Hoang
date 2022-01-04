@@ -20,6 +20,6 @@ public class TC07 extends TestBase {
         String expectedMsg = "Thank you for registering your account";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Success msg is not display as expected");
-        System.out.println("Test Case passed.");
+        System.out.println("Test Case ran.");
     }
 }

@@ -18,12 +18,11 @@ public class TC08 extends TestBase {
         registerPage.gotoRegisterPage();
         registerPage.registerAccount(registerPage.randomEmail(),Constant.PASSWORD,Constant.PASSWORD,registerPage.randomPID());
         loginPage.gotoLoginPage();
-        loginPage.login(registerPage.autoEmail, Constant.PASSWORD);
+        loginPage.getLogin(registerPage.autoEmail, Constant.PASSWORD);
 
-        String actualMsg = loginPage.getErrorMessage();
-        String expectedMsg = "Invalid username or password. Please try again.";
+        Boolean actualMsg = loginPage.isErrMesDisplay();
 
-        Assert.assertEquals(actualMsg, expectedMsg, "Error msg is not display as expected");
-        System.out.println("Test Case passed.");
+        Assert.assertTrue(actualMsg,"Error msg is not display as expected");
+        System.out.println("Test Case ran.");
     }
 }

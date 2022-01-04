@@ -15,12 +15,12 @@ public class TC05 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.loginMultipleTimes(Constant.USENAME,"hoang20997",5);
+        loginPage.getLoginMultipleTimes(Constant.USENAME,"hoang20997",5);
 
         String actualMsg = loginPage.getErrorMessage();
         String expectedMsg = "You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.";
 
         Assert.assertEquals(actualMsg, expectedMsg, "Error msg is not display as expected");
-        System.out.println("Test Case passed.");
+        System.out.println("Test Case ran.");
     }
 }

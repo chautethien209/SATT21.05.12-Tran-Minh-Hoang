@@ -16,12 +16,11 @@ public class TC06 extends TestBase {
 
         homePage.open();
         loginPage.gotoLoginPage();
-        loginPage.login(Constant.USENAME, Constant.PASSWORD);
+        loginPage.getLogin(Constant.USENAME, Constant.PASSWORD);
 
-        String actualMsg = logoutPage.check;
-        String expectedMsg = null;
+        Boolean actualMsg = logoutPage.isGoToLogoutPage();
 
-        Assert.assertEquals(actualMsg, expectedMsg, "'Log out' tab is not disappeared");
-        System.out.println("Test Case passed.");
+        Assert.assertTrue(actualMsg,"Logout tab is display in menu");
+        System.out.println("Test Case ran.");
     }
 }
