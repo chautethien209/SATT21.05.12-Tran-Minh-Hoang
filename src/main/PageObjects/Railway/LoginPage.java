@@ -25,7 +25,6 @@ public class LoginPage extends GeneralPage {
     protected WebElement getLblErrorMessage() {return Constant.WEBDRIVER.findElement(lblErrorMessage);}
 
     //Methods
-
     public boolean isErrMesDisplay(){
         try{
             if (getLblErrorMessage().isDisplayed())

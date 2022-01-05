@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class RegisterPage extends GeneralPage {
 
-    //locator
+    //Locator
     private final By txtEmail = By.id("email");
     private final By txtPassword = By.id("password");
     private final By txtConfirmPassword = By.id("confirmPassword");
@@ -60,8 +60,9 @@ public class RegisterPage extends GeneralPage {
     public String autoEmail;
 
     public String randomEmail() {
+        Constant.getDate();
         String generateEmail = RandomStringUtils.randomAlphabetic(6);
-        autoEmail = generateEmail + "@gmail.com";
+        autoEmail = Constant.date + generateEmail + "@gmail.com";
         return autoEmail;
     }
 

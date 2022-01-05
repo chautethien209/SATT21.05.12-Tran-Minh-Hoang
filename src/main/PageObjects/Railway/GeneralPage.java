@@ -7,7 +7,6 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -20,6 +19,7 @@ public class GeneralPage {
     private final By tabBookTicket = By.xpath("//div[@id='menu']//a[@href = '/Page/BookTicketPage.cshtml']");
     private final By tabLogin = By.xpath("//div[@id='menu']//a[@href = '/Account/Login.cshtml']");
     private final By tabRegister = By.xpath("//div[@id='menu']//a[@href ='/Account/Register.cshtml']");
+    private final By tabMyTicket = By.xpath("//div[@id='menu']//a[@href ='/Page/ManageTicket.cshtml']");
     private final By tabChangePassword = By.xpath("//div[@id='menu']//a[@href ='/Account/ChangePassword.cshtml']");
     private final By tabLogout = By.xpath("//div[@id='menu']//a[@href = '/Account/Logout']");
     private final By lblWelcomeMesage = By.xpath("//div[@class='account']/strong");
@@ -38,6 +38,9 @@ public class GeneralPage {
         return Constant.WEBDRIVER.findElement(tabRegister);
     }
     protected WebElement getTabLogin() {return Constant.WEBDRIVER.findElement(tabLogin);}
+    protected WebElement getTabMyTicket() {
+        return Constant.WEBDRIVER.findElement(tabMyTicket);
+    }
     protected WebElement getTabChangePassword() {
         return Constant.WEBDRIVER.findElement(tabChangePassword);
     }
@@ -67,6 +70,10 @@ public class GeneralPage {
 
     public void gotoLoginPage(){
         this.getTabLogin().click();
+    }
+
+    public void gotoMyTicketPage(){
+        this.getTabMyTicket().click();
     }
 
     public void gotoChangePasswordPage(){

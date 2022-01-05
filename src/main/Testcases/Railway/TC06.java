@@ -29,8 +29,8 @@ public class TC06 extends TestBase {
         logoutPage.gotoLogoutPage();
 
 
-        Boolean actualMsg1 = logoutPage.isGoToLogoutPage();
-        Assert.assertTrue(actualMsg1,"The logout tab still display in the menu");
+        Boolean actualMsg1 = logoutPage.isLogoutDisplay();
+        Assert.assertFalse(actualMsg1,"The logout tab still display in the menu");
 
         Boolean actualMsg2 = homePage.isHomePageDisplay();
         Assert.assertTrue(actualMsg2,"'Home' page is not display ");

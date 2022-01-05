@@ -1,12 +1,31 @@
 {
-    "TC14": {
-      "Depart from": "Nha Trang",
-      "Arrive at": "Sài Gòn",
-      "Seat type": "Soft seat",
-      "Ticket amount": "5"
-    },
-    "TC15": {
-      "Depart Station": "Đà Nẵng",
-      "Arrive Station": "Sài Gòn"
-    }
+  "TC14": {
+    "Depart from": "Nha Trang",
+    "Arrive at": "Sài Gòn",
+    "Seat type": "Soft seat",
+    "Ticket amount": "5"
+  },
+  "TC15": {
+    "Depart Station": "Đà Nẵng",
+    "Arrive Station": "Sài Gòn",
+    "HS": "310000",
+    "SS": "335000",
+    "SSC": "360000",
+    "HB": "410000",
+    "SB": "460000",
+    "SBC": "510000"
+  },
+  "TC16": {
+    "Depart from": "Nha Trang",
+    "Arrive at": "Sài Gòn",
+    "Seat type": "Soft seat",
+    "Ticket amount": "5"
+  },
+  "TC17": {
+    "Depart from": "Nha Trang",
+    "Arrive at": "Sài Gòn",
+    "Seat type": "Soft seat",
+    "Ticket amount 10": "10",
+    "Ticket amount 1": "1"
+  }
 }

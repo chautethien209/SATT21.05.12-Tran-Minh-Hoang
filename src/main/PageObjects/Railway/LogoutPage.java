@@ -15,17 +15,12 @@ public class LogoutPage extends GeneralPage {
     }
 
     //Methods
-    public boolean isGoToLogoutPage(){
+    public boolean isLogoutDisplay(){
         try{
-            if (getLblLogout().isDisplayed())
-            {
-                return false;
-            }else{
-                return true;
-            }
+            return this.getLblLogout().isDisplayed();
         }catch (Exception e){
             System.out.print(e.getMessage());
         }
-        return true;
+        return false;
     }
 }
