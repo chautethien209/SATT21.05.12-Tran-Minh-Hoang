@@ -19,13 +19,13 @@ public class LogoutPage extends GeneralPage {
         try{
             if (getLblLogout().isDisplayed())
             {
-                return true;
-            }else{
                 return false;
+            }else{
+                return true;
             }
         }catch (Exception e){
             System.out.print(e.getMessage());
         }
-        return false;
+        return true;
     }
 }

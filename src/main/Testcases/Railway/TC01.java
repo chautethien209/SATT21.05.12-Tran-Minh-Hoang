@@ -13,14 +13,19 @@ public class TC01 extends TestBase {
         HomePage homePage = new HomePage();
         LoginPage loginPage = new LoginPage();
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
+
+        System.out.println("2. Click on 'Login' tab");
         loginPage.gotoLoginPage();
+
+        System.out.println("3. Login with valid account");
         loginPage.getLogin(Constant.USENAME, Constant.PASSWORD);
 
         String actualMsg = homePage.getWelcomeMesage();
         String expectedMsg = "Welcome guest!";
-
         Assert.assertEquals(actualMsg, expectedMsg, "Welcome msg is not display as expected");
+
         System.out.println("Test Case ran.");
     }
 }
