@@ -42,16 +42,13 @@ public class LoginPage extends GeneralPage {
     public String getErrorMessage() {return this.getLblErrorMessage().getText();}
 
     public void getLogin(String name, String password) {
-        //Submit login
         this.getTxtUsername().sendKeys(name);
         this.getTxtPassword().sendKeys(password);
         this.getBtnLogin().click();
     }
 
     public void getLoginMultipleTimes(String name, String password, int times) {
-        //Submit login
         getLogin(name, password);
-
         for (int i = 1; i < times; i++) {
             this.getTxtUsername().clear();
             getLogin(name, password);

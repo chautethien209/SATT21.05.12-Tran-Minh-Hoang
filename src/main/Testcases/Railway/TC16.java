@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class TC16 extends TestBase {
     @Test(description = "TC16 - User can cancel a ticket", dataProvider = "data-provider")
-    public void TC016(String departStation, String arriveStation, String seatType, String ticketAmount) {
+    public void TC016(String departStation, String arriveStation, String seatType, String ticketAmount, String noTicket) {
         HomePage homePage = new HomePage();
         RegisterPage registerPage = new RegisterPage();
         LoginPage loginPage = new LoginPage();
@@ -43,9 +43,9 @@ public class TC16 extends TestBase {
         myTicketPage.gotoMyTicketPage();
 
         System.out.println("5. Cancel a ticket");
-        myTicketPage.getCancel("1", departStation, arriveStation);
+        myTicketPage.getCancel(noTicket, departStation, arriveStation);
 
-        Assert.assertFalse(myTicketPage.isCancelDisplay("1", departStation, arriveStation), "Cancel button still display");
+        Assert.assertFalse(myTicketPage.isCancelDisplay(noTicket, departStation, arriveStation), "Cancel button still display");
 
         System.out.println("Test Case ran.");
     }
@@ -58,8 +58,9 @@ public class TC16 extends TestBase {
         String arriveStation = dataTC16.get("Arrive at").getAsString();
         String seatType = dataTC16.get("Seat type").getAsString();
         String ticketAmount = dataTC16.get("Ticket amount").getAsString();
+        String noTicket = dataTC16.get("Number of Ticket").getAsString();
         Object[][] object = new Object[][]{
-                {departStation, arriveStation, seatType, ticketAmount}
+                {departStation, arriveStation, seatType, ticketAmount, noTicket}
         };
         return object;
     }

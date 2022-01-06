@@ -60,7 +60,7 @@ public class RegisterPage extends GeneralPage {
     public String autoEmail;
 
     public String randomEmail() {
-        Constant.getDate();
+        Constant.getDate(7);
         String generateEmail = RandomStringUtils.randomAlphabetic(6);
         autoEmail = Constant.date + generateEmail + "@gmail.com";
         return autoEmail;

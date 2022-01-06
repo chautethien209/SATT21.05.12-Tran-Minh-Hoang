@@ -4,8 +4,6 @@ import main.Common.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import java.util.concurrent.TimeUnit;
-
 public class TimeTablePage extends GeneralPage {
     //Locator
     private final By tabTimetable = By.xpath("//div[@id='menu']//a[@href ='TrainTimeListPage.cshtml']");
@@ -37,8 +35,8 @@ public class TimeTablePage extends GeneralPage {
     }
 
     public void checkPrice(String departStation, String arriveStation) {
-            Constant.WEBDRIVER.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
-            this.getLnkCheckPrice(departStation, arriveStation).click();
+        Constant.getWait();
+        this.getLnkCheckPrice(departStation, arriveStation).click();
     }
 
     public String getSeatTypePrice(String seatType) {return this.getLblPrice(seatType).getText(); }

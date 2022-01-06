@@ -36,7 +36,6 @@ public class ChangePasswordPage extends GeneralPage {
     public String getConfirmPassErrMsg() {return this.getLblConfirmPassErrMsg().getText();}
 
     public void changePassword(String currentpassword, String newpassword, String confirmpassword) {
-        //Submit login
         this.getTxtCurrentPassword().sendKeys(currentpassword);
         this.getTxtNewPassword().sendKeys(newpassword);
         this.getTxtConfirmPassword().sendKeys(confirmpassword);

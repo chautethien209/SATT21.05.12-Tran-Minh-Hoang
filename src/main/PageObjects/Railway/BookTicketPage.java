@@ -3,7 +3,6 @@ package main.PageObjects.Railway;
 import main.Common.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import java.util.concurrent.TimeUnit;
 
 public class BookTicketPage extends GeneralPage {
 
@@ -62,31 +61,32 @@ public class BookTicketPage extends GeneralPage {
     public String getMesBookSuccess() {return this.getLblMessageBookSuccess().getText();}
 
     public void getDepartDate() {
-        Constant.getDate();
-            this.getDblDepartDate(Constant.date).click();
-
+        Constant.getDate(7);
+        this.getDblDepartDate(Constant.date).click();
     }
 
     public void getDepartFrom(String departFrom) {
+        Constant.getWait();
         this.getDblDepartFrom(departFrom).click();
     }
 
     public void getArriveAt(String arrivalAt) {
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+        Constant.getWait();
         this.getDblArriveAt(arrivalAt).click();
     }
 
     public void getSeatType(String seatType) {
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+        Constant.getWait();
         this.getDblSeatType(seatType).click();
     }
 
     public void getTicketAmount(String ticketAmount) {
-        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
+        Constant.getWait();
         this.getDblTicketAmount(ticketAmount).click();
     }
 
     public void clickBtnBookTicket() {
+        Constant.getWait();
         this.getBtnBookTicket().click();
     }
 
