@@ -26,11 +26,11 @@ public class TC11 extends TestBase {
         Assert.assertEquals(actualMsg1, expectedMsg1, "Error msg is not display as expected");
 
         String actualMsg2 = registerPage.getPasswordErrMsg();
-        String expectedMsg2 = "Invalid password length.";
+        String expectedMsg2 = "Invalid password length";
         Assert.assertEquals(actualMsg2, expectedMsg2, "'Password' field error msg is not display as expected");
 
         String actualMsg3 = registerPage.getPIDErrMsg();
-        String expectedMsg3 = "Invalid ID length.";
+        String expectedMsg3 = "Invalid ID length";
         Assert.assertEquals(actualMsg3, expectedMsg3, "'PID' field error msg is not display as expected");
 
         System.out.println("Test Case ran.");
