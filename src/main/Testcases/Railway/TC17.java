@@ -36,7 +36,7 @@ public class TC17 extends TestBase {
         bookticketPage.gotoBookTicketPage();
 
         System.out.println("4. Book 10 tickets.");
-        bookticketPage.getDepartDate();
+        bookticketPage.getDepartDate(7);
         bookticketPage.getDepartFrom(departStation);
         bookticketPage.getArriveAt(arriveStation);
         bookticketPage.getSeatType(seatType);
@@ -47,7 +47,7 @@ public class TC17 extends TestBase {
         bookticketPage.gotoBookTicketPage();
 
         System.out.println("6. Book one more ticket.");
-        bookticketPage.getDepartDate();
+        bookticketPage.getDepartDate(7);
         bookticketPage.getDepartFrom(departStation);
         bookticketPage.getArriveAt(arriveStation);
         bookticketPage.getSeatType(seatType);

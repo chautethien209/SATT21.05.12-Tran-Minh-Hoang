@@ -10,6 +10,7 @@ public class GeneralPage {
     //locator
     private final By tabHome = By.xpath("//div[@id='menu']//a/span[text()='Home']/..");
     private final By tabContact = By.xpath("//div[@id='menu']//a[@href ='/Page/Contact.cshtml']");
+    private final By tabTicketPrice = By.xpath("//div[@id='menu']//a[@href = '/Page/TrainPriceListPage.cshtml']");
     private final By tabBookTicket = By.xpath("//div[@id='menu']//a[@href = '/Page/BookTicketPage.cshtml']");
     private final By tabLogin = By.xpath("//div[@id='menu']//a[@href = '/Account/Login.cshtml']");
     private final By tabRegister = By.xpath("//div[@id='menu']//a[@href ='/Account/Register.cshtml']");
@@ -24,6 +25,9 @@ public class GeneralPage {
     }
     protected WebElement getTabContact() {
         return Constant.WEBDRIVER.findElement(tabContact);
+    }
+    protected WebElement getTabTicketPrice() {
+        return Constant.WEBDRIVER.findElement(tabTicketPrice);
     }
     protected WebElement getTabBookTicket() {
         return Constant.WEBDRIVER.findElement(tabBookTicket);
@@ -52,6 +56,10 @@ public class GeneralPage {
 
     public void gotoContactPage(){
         this.getTabContact().click();
+    }
+
+    public void gotoTicketPricePage(){
+        this.getTabTicketPrice().click();
     }
 
     public void gotoBookTicketPage(){

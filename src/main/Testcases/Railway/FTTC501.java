@@ -12,9 +12,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class TC14 extends TestBase {
-    @Test(description = "TC14 - User can book many tickets at a time", dataProvider = "data-provider")
-    public void TC014(String departStation, String arriveStation, String seatType, String ticketAmount) {
+public class FTTC501 extends TestBase {
+    @Test(description = "FTTC501 - User can book tickets at a time", dataProvider = "data-provider")
+    public void FTTC501(String departStation, String arriveStation, String seatType, String ticketAmount) {
         HomePage homePage = new HomePage();
         BookTicketPage bookticketPage = new BookTicketPage();
         RegisterPage registerPage = new RegisterPage();
@@ -23,7 +23,7 @@ public class TC14 extends TestBase {
         System.out.println("Pre-condition: Create and activate a new account");
         homePage.open();
         registerPage.gotoRegisterPage();
-        registerPage.registerAccount(registerPage.randomEmail(),Constant.PASSWORD,Constant.PASSWORD,registerPage.randomPID());
+        registerPage.registerAccount(registerPage.randomEmail(), Constant.PASSWORD, Constant.PASSWORD, registerPage.randomPID());
 
         System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
@@ -35,12 +35,20 @@ public class TC14 extends TestBase {
         System.out.println("3. Click on 'Book ticket' tab");
         bookticketPage.gotoBookTicketPage();
 
-        System.out.println("4. Book ticket.");
+        System.out.println("4. Select a 'Depart date' from the list");
         bookticketPage.getDepartDate(7);
+
+        System.out.println("5. Select 'Đà Nẵng' for 'Depart from' and 'Quảng Ngãi' for 'Arrive at'");
         bookticketPage.getDepartFrom(departStation);
         bookticketPage.getArriveAt(arriveStation);
+
+        System.out.println("6. Select 'Soft bed' for 'Seat type'");
         bookticketPage.getSeatType(seatType);
+
+        System.out.println("7. Select '3' for 'Ticket amount'");
         bookticketPage.getTicketAmount(ticketAmount);
+
+        System.out.println("8. Click on 'Book ticket' button");
         bookticketPage.clickBtnBookTicket();
 
         String actualMsg1 = bookticketPage.getMesBookSuccess();
@@ -73,11 +81,11 @@ public class TC14 extends TestBase {
     @DataProvider(name = "data-provider")
     public Object[][] dataProvider(){
         JsonObject jsonObject = JsonHelper.getJsonObject(Utilities.jsonProjectPath());
-        JsonObject dataTC14 = jsonObject.getAsJsonObject(this.getClass().getSimpleName());
-        String departStation = dataTC14.get("Depart from").getAsString();
-        String arriveStation = dataTC14.get("Arrive at").getAsString();
-        String seatType = dataTC14.get("Seat type").getAsString();
-        String ticketAmount = dataTC14.get("Ticket amount").getAsString();
+        JsonObject dataFTTC501 = jsonObject.getAsJsonObject(this.getClass().getSimpleName());
+        String departStation = dataFTTC501.get("Depart from").getAsString();
+        String arriveStation = dataFTTC501.get("Arrive at").getAsString();
+        String seatType = dataFTTC501.get("Seat type").getAsString();
+        String ticketAmount = dataFTTC501.get("Ticket amount").getAsString();
         Object[][] object = new Object[][]{
                 {departStation, arriveStation, seatType, ticketAmount}
         };

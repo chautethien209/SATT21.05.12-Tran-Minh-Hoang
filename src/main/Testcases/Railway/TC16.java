@@ -32,7 +32,7 @@ public class TC16 extends TestBase {
 
         System.out.println("3. Book a ticket.");
         bookticketPage.gotoBookTicketPage();
-        bookticketPage.getDepartDate();
+        bookticketPage.getDepartDate(7);
         bookticketPage.getDepartFrom(departStation);
         bookticketPage.getArriveAt(arriveStation);
         bookticketPage.getSeatType(seatType);

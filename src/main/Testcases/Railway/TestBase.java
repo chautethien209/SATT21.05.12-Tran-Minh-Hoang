@@ -8,8 +8,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-import java.io.IOException;
-
 public class TestBase {
     @BeforeTest
     public void initTest(){
@@ -22,7 +20,7 @@ public class TestBase {
     }
 
     @BeforeMethod
-    public void beforeMethod() throws IOException {
+    public void beforeMethod() {
         System.out.println("Pre-condition");
         System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath());
         Constant.WEBDRIVER = new ChromeDriver();

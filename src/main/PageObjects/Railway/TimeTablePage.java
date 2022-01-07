@@ -35,7 +35,7 @@ public class TimeTablePage extends GeneralPage {
     }
 
     public void checkPrice(String departStation, String arriveStation) {
-        Constant.getWait();
+        Constant.getWait(20);
         this.getLnkCheckPrice(departStation, arriveStation).click();
     }
 

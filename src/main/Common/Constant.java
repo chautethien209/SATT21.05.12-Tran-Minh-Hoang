@@ -21,7 +21,7 @@ public class Constant {
             date = date.substring(1);
         }
     }
-    public static void getWait() {
-        WEBDRIVER.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public static void getWait(int sec) {
+        Constant.WEBDRIVER.manage().timeouts().implicitlyWait(sec,TimeUnit.SECONDS);
     }
 }

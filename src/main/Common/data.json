@@ -28,5 +28,22 @@
     "Seat type": "Soft seat",
     "Ticket amount 10": "10",
     "Ticket amount 1": "1"
+  },
+  "FTTC501": {
+    "Depart from": "Đà Nẵng",
+    "Arrive at": "Quảng Ngãi",
+    "Seat type": "Soft bed",
+    "Ticket amount": "3"
+  },
+  "FTTC502": {
+    "Depart from": "Nha Trang",
+    "Arrive at": "Sài Gòn",
+    "Seat type": "Soft seat",
+    "Ticket amount": "1"
+  },
+  "FTTC503": {
+    "Depart Station": "Đà Nẵng",
+    "Arrive Station": "Huế",
+    "Seat type": "Hard seat"
   }
 }

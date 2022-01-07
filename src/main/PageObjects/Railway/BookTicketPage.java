@@ -60,34 +60,44 @@ public class BookTicketPage extends GeneralPage {
 
     public String getMesBookSuccess() {return this.getLblMessageBookSuccess().getText();}
 
-    public void getDepartDate() {
-        Constant.getDate(7);
+    public void getDepartDate(int day) {
+        Constant.getDate(day);
         this.getDblDepartDate(Constant.date).click();
     }
 
     public void getDepartFrom(String departFrom) {
-        Constant.getWait();
+        Constant.getWait(20);
         this.getDblDepartFrom(departFrom).click();
     }
 
     public void getArriveAt(String arrivalAt) {
-        Constant.getWait();
+        Constant.getWait(20);
         this.getDblArriveAt(arrivalAt).click();
     }
 
     public void getSeatType(String seatType) {
-        Constant.getWait();
+        Constant.getWait(20);
         this.getDblSeatType(seatType).click();
     }
 
     public void getTicketAmount(String ticketAmount) {
-        Constant.getWait();
+        Constant.getWait(20);
         this.getDblTicketAmount(ticketAmount).click();
     }
 
     public void clickBtnBookTicket() {
-        Constant.getWait();
+        Constant.getWait(20);
         this.getBtnBookTicket().click();
+    }
+
+    public void bookTicket(int day, String departFrom, String arrivalAt, String seatType, String ticketAmount) {
+        gotoBookTicketPage();
+        getDepartDate(day);
+        getDepartFrom(departFrom);
+        getArriveAt(arrivalAt);
+        getSeatType(seatType);
+        getTicketAmount(ticketAmount);
+        clickBtnBookTicket();
     }
 
     public String getResultDate() {return this.getLblResultDate().getText();}
